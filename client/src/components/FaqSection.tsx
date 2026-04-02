@@ -31,16 +31,12 @@ const faqs = [
     a: "Fill out the booking request form on this page with as much detail as possible — subject matter, size, placement, and any reference images. Taylor reviews all requests and responds within 3–5 business days. Custom projects require a non-refundable deposit to secure your appointment.",
   },
   {
-    q: "What is the minimum charge?",
-    a: "The studio minimum is $100 CAD. Flash designs start at $120 depending on size. Custom work is quoted based on size, complexity, and placement. All pricing is discussed before any commitment is made.",
-  },
-  {
     q: "How should I prepare for my appointment?",
-    a: "Eat a full meal beforehand, stay hydrated, and wear comfortable clothing that allows easy access to the area being tattooed. Avoid alcohol for 24 hours before your session. If you're nervous, that's completely normal — Taylor will walk you through everything.",
+    a: "Eat a full meal beforehand, stay hydrated, and wear comfortable clothing that allows easy access to the area being tattooed. Avoid alcohol for 24 hours before your session.",
   },
   {
     q: "What is the aftercare process?",
-    a: "After your session, Taylor will bandage the tattoo and give you a full verbal and written aftercare guide. In brief: keep it clean, moisturise with unscented lotion, avoid soaking, and stay out of direct sun while healing. Touch-ups are free within the first year if needed.",
+    a: "After your session, Taylor will bandage the tattoo and go over aftercare with you. Keep it clean, moisturise with unscented lotion, avoid soaking, and stay out of direct sun while healing. Touch-ups are free for life.",
   },
   {
     q: "Do you do cover-ups?",
