@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="font-display text-2xl text-black mb-2">Taylor Rauma</p>
             <p className="section-label mb-6">Traditional Tattooing · Vancouver, BC</p>
             <p className="font-body text-xs text-[#aaa] leading-relaxed font-light max-w-[200px]">
-              Bold lines, solid colour, designs built to last a lifetime.
+              Designs built to last a lifetime.
             </p>
             {/* Social */}
             <div className="flex gap-3 mt-6">
