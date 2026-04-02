@@ -58,7 +58,7 @@ export default function HeroSection() {
         <img
           src={HERO_IMG}
           alt="Taylor Rauma traditional tattoo flash — black cat"
-          className="absolute inset-0 w-full h-full object-contain object-center p-6"
+          className="absolute inset-0 w-full h-full object-contain object-center scale-110"
         />
         {/* Subtle right-side fade for text legibility on mobile */}
         <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent md:hidden pointer-events-none" />
