@@ -77,11 +77,7 @@ export default function BookingSection() {
 
           <div className="space-y-6 text-sm">
             {[
-              { label: "Walk-ins", value: "Welcome for flash during studio hours" },
               { label: "Custom work", value: "By appointment only — deposit required" },
-              { label: "Minimum charge", value: "$100 CAD" },
-              { label: "Payment", value: "Cash preferred, card accepted (+3%)" },
-              { label: "Hours", value: "Tue – Sat, 12:00 – 8:00 PM" },
             ].map((item, i) => (
               <div key={i} className="flex gap-6">
                 <p className="font-body text-white/30 font-light w-28 shrink-0 text-xs tracking-wide uppercase">{item.label}</p>
