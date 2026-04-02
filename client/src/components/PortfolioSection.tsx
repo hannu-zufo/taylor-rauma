@@ -1,62 +1,21 @@
 /**
  * PortfolioSection — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Gallery grid using real images sourced from @taylorrauma Instagram
+ * Gallery grid — placeholder slots ready for your own images
  */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const INSTAGRAM_URL = "https://www.instagram.com/taylorrauma/";
 
-// Real images from @taylorrauma Instagram
 const portfolioItems = [
-  {
-    id: 1,
-    title: "Globe & Lantern",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/bdRAeTXzc0Sm_c3896918.jpg",
-    span: "row-span-2",
-  },
-  {
-    id: 2,
-    title: "Hannya Mask",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/CWKIdt1qMhaI_c25efb9d.jpg",
-    span: "",
-  },
-  {
-    id: 3,
-    title: "Dagger & Rose",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/HB0pBpGM26gV_b60b77a4.jpg",
-    span: "",
-  },
-  {
-    id: 4,
-    title: "Hand Piece",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/RjBCRrs44lXx_ff823968.jpg",
-    span: "",
-  },
-  {
-    id: 5,
-    title: "Skull Cherries",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/NBdZw7XSfe0y_98489dd7.jpg",
-    span: "row-span-2",
-  },
-  {
-    id: 6,
-    title: "Black & White Flash",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/dgAQU6utpaTJ_3309563b.jpg",
-    span: "",
-  },
-  {
-    id: 7,
-    title: "Traditional Flash",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/L3lNzBaHc00G_051b9cdf.jpg",
-    span: "",
-  },
-  {
-    id: 8,
-    title: "Plant & Vase",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/cssDp4bViwp4_4e409546.jpg",
-    span: "",
-  },
+  { id: 1, span: "row-span-2" },
+  { id: 2, span: "" },
+  { id: 3, span: "" },
+  { id: 4, span: "" },
+  { id: 5, span: "row-span-2" },
+  { id: 6, span: "" },
+  { id: 7, span: "" },
+  { id: 8, span: "" },
 ];
 
 function useFadeUp(delay = 0) {
@@ -81,7 +40,6 @@ function useFadeUp(delay = 0) {
 
 export default function PortfolioSection() {
   const headerRef = useFadeUp();
-  const [lightbox, setLightbox] = useState<{ img: string; title: string } | null>(null);
 
   return (
     <section id="portfolio" className="py-24 md:py-32 border-t border-black/8">
@@ -101,12 +59,7 @@ export default function PortfolioSection() {
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 auto-rows-[280px] md:auto-rows-[320px]">
           {portfolioItems.map((item, i) => (
-            <GalleryItem
-              key={item.id}
-              item={item}
-              delay={i * 60}
-              onClick={() => setLightbox({ img: item.img, title: item.title })}
-            />
+            <PlaceholderItem key={item.id} item={item} delay={i * 60} />
           ))}
         </div>
 
@@ -130,43 +83,16 @@ export default function PortfolioSection() {
           </a>
         </div>
       </div>
-
-      {/* Lightbox */}
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-white/95 backdrop-blur-sm p-6"
-          onClick={() => setLightbox(null)}
-        >
-          <div className="relative max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={lightbox.img}
-              alt={lightbox.title}
-              className="w-full h-auto max-h-[80vh] object-contain"
-            />
-            <div className="flex items-center justify-between mt-4">
-              <p className="font-display text-lg text-black">{lightbox.title}</p>
-              <button
-                onClick={() => setLightbox(null)}
-                className="font-body text-xs tracking-[0.15em] uppercase text-[#888] hover:text-black transition-colors"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 }
 
-function GalleryItem({
+function PlaceholderItem({
   item,
   delay,
-  onClick,
 }: {
-  item: { id: number; title: string; img: string; span: string };
+  item: { id: number; span: string };
   delay: number;
-  onClick: () => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -188,18 +114,14 @@ function GalleryItem({
   return (
     <div
       ref={ref}
-      className={`fade-up group relative overflow-hidden cursor-pointer bg-[#f5f5f5] ${item.span}`}
-      onClick={onClick}
+      className={`fade-up relative overflow-hidden bg-[#f0f0f0] ${item.span}`}
     >
-      <img
-        src={item.img}
-        alt={item.title}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-white/0 group-hover:bg-white/15 transition-all duration-400" />
-      <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-        <p className="font-display text-base text-white drop-shadow-sm">{item.title}</p>
+      {/* Subtle cross-hair placeholder */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative w-8 h-8 opacity-20">
+          <div className="absolute top-1/2 left-0 right-0 h-px bg-black -translate-y-1/2" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-black -translate-x-1/2" />
+        </div>
       </div>
     </div>
   );
