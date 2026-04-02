@@ -47,7 +47,6 @@ export default function PortfolioSection() {
         {/* Header */}
         <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div>
-            <p className="section-label mb-3">The Work</p>
             <h2 className="font-display text-5xl md:text-6xl text-black">Portfolio</h2>
           </div>
         </div>
