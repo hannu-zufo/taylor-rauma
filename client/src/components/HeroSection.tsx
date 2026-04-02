@@ -23,7 +23,7 @@ export default function HeroSection() {
         <img
           src={LOGO_URL}
           alt="Taylor Rauma Tattoo logo"
-          className="w-[clamp(180px,20vw,340px)] h-[clamp(180px,20vw,340px)] object-contain shrink-0"
+          className="w-[clamp(260px,36vw,600px)] h-[clamp(260px,36vw,600px)] object-contain shrink-0"
         />
       </div>
 
