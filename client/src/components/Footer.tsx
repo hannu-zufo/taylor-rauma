@@ -23,7 +23,7 @@ export default function Footer() {
             {/* Social */}
             <div className="flex gap-3 mt-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/taylorrauma/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"

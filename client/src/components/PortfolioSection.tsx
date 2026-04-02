@@ -1,58 +1,60 @@
 /**
  * PortfolioSection — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Asymmetric masonry-style gallery grid with lightbox
+ * Gallery grid using real images sourced from @taylorrauma Instagram
  */
 import { useEffect, useRef, useState } from "react";
 
-// Portfolio items — mix of generated and Unsplash tattoo images
+const INSTAGRAM_URL = "https://www.instagram.com/taylorrauma/";
+
+// Real images from @taylorrauma Instagram
 const portfolioItems = [
   {
     id: 1,
-    title: "Eagle & Banner",
-    img: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800&q=85&fit=crop",
+    title: "Globe & Lantern",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/bdRAeTXzc0Sm_c3896918.jpg",
     span: "row-span-2",
   },
   {
     id: 2,
-    title: "Rose Flash",
-    img: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=600&q=85&fit=crop",
+    title: "Hannya Mask",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/CWKIdt1qMhaI_c25efb9d.jpg",
     span: "",
   },
   {
     id: 3,
-    title: "Panther",
-    img: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=85&fit=crop",
+    title: "Dagger & Rose",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/HB0pBpGM26gV_b60b77a4.jpg",
     span: "",
   },
   {
     id: 4,
-    title: "Nautical Anchor",
-    img: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=600&q=85&fit=crop&crop=entropy",
+    title: "Hand Piece",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/RjBCRrs44lXx_ff823968.jpg",
     span: "",
   },
   {
     id: 5,
-    title: "Dagger & Heart",
-    img: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=85&fit=crop&crop=top",
+    title: "Skull Cherries",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/NBdZw7XSfe0y_98489dd7.jpg",
     span: "row-span-2",
   },
   {
     id: 6,
-    title: "Swallow",
-    img: "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=600&q=85&fit=crop&crop=bottom",
+    title: "Black & White Flash",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/dgAQU6utpaTJ_3309563b.jpg",
     span: "",
   },
   {
     id: 7,
-    title: "Ship & Waves",
-    img: "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=600&q=85&fit=crop&crop=faces",
+    title: "Traditional Flash",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/L3lNzBaHc00G_051b9cdf.jpg",
     span: "",
   },
   {
     id: 8,
-    title: "Skull & Roses",
-    img: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=85&fit=crop&crop=center",
+    title: "Plant & Vase",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/cssDp4bViwp4_4e409546.jpg",
     span: "",
   },
 ];
@@ -110,11 +112,11 @@ export default function PortfolioSection() {
 
         {/* Instagram link */}
         <div className="flex items-center justify-between mt-10 pt-8 border-t border-black/8">
-          <p className="font-body text-xs text-[#aaa] tracking-wide">
-            Updated regularly
+          <p className="font-body text-xs text-[#aaa] tracking-wide font-light">
+            More work on Instagram
           </p>
           <a
-            href="https://instagram.com"
+            href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-xs tracking-[0.12em] uppercase text-black border-b border-black pb-0.5 hover:opacity-50 transition-opacity duration-200 flex items-center gap-2"
@@ -195,7 +197,6 @@ function GalleryItem({
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         loading="lazy"
       />
-      {/* Hover overlay */}
       <div className="absolute inset-0 bg-white/0 group-hover:bg-white/15 transition-all duration-400" />
       <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
         <p className="font-display text-base text-white drop-shadow-sm">{item.title}</p>
