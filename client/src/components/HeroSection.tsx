@@ -4,7 +4,7 @@
  * Full-viewport hero: left-aligned typographic lockup, right-side image split
  */
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tr-hero-nTACETNH8yWBjLTWxTtYQi.webp";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taylorblackcat_324d66f8.jpeg";
 
 export default function HeroSection() {
   const scrollTo = (href: string) => {
@@ -57,8 +57,8 @@ export default function HeroSection() {
       <div className="w-full md:w-[52%] lg:w-[55%] relative overflow-hidden min-h-[50vw] md:min-h-0">
         <img
           src={HERO_IMG}
-          alt="Tattoo machine close-up"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          alt="Taylor Rauma traditional tattoo flash — black cat"
+          className="absolute inset-0 w-full h-full object-contain object-center p-6"
         />
         {/* Subtle right-side fade for text legibility on mobile */}
         <div className="absolute inset-0 bg-gradient-to-t from-white/30 to-transparent md:hidden pointer-events-none" />
