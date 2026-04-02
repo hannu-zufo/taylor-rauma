@@ -1,28 +1,26 @@
 /**
- * Home — Iron & Tide Tattoo
- * Design: Pacific Northwest Gothic — Dark Coastal Americana
- * Assembles all sections: Hero → Portfolio → Flash → About → Testimonials → Care → Booking → Footer
+ * Home — Taylor Rauma Tattoo
+ * Design: Clean Minimal — Black & White
+ * Sections: Hero → Portfolio → About → Shop → FAQ → Booking → Footer
  */
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import PortfolioSection from "@/components/PortfolioSection";
-import FlashSection from "@/components/FlashSection";
 import AboutSection from "@/components/AboutSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import CareSection from "@/components/CareSection";
+import ShopSection from "@/components/ShopSection";
+import FaqSection from "@/components/FaqSection";
 import BookingSection from "@/components/BookingSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[oklch(0.11_0.006_60)] text-[oklch(0.92_0.03_80)]">
+    <div className="min-h-screen bg-white text-black">
       <Navigation />
       <HeroSection />
       <PortfolioSection />
-      <FlashSection />
       <AboutSection />
-      <TestimonialsSection />
-      <CareSection />
+      <ShopSection />
+      <FaqSection />
       <BookingSection />
       <Footer />
     </div>
