@@ -1,25 +1,30 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home — Iron & Tide Tattoo
+ * Design: Pacific Northwest Gothic — Dark Coastal Americana
+ * Assembles all sections: Hero → Portfolio → Flash → About → Testimonials → Care → Booking → Footer
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import PortfolioSection from "@/components/PortfolioSection";
+import FlashSection from "@/components/FlashSection";
+import AboutSection from "@/components/AboutSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import CareSection from "@/components/CareSection";
+import BookingSection from "@/components/BookingSection";
+import Footer from "@/components/Footer";
 
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen bg-[oklch(0.11_0.006_60)] text-[oklch(0.92_0.03_80)]">
+      <Navigation />
+      <HeroSection />
+      <PortfolioSection />
+      <FlashSection />
+      <AboutSection />
+      <TestimonialsSection />
+      <CareSection />
+      <BookingSection />
+      <Footer />
     </div>
   );
 }
