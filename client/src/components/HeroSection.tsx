@@ -14,7 +14,7 @@ export default function HeroSection() {
       <p className="section-label mb-6">Vancouver, BC</p>
 
       <h1 className="font-display text-[clamp(4rem,12vw,10rem)] leading-[0.9] text-black mb-8">
-        Taylor<br />Rauma
+        Taylor<br />Rauma<br />Tattoos
       </h1>
 
       <div className="w-8 h-px bg-black mb-8" />
