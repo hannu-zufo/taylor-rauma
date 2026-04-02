@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "What forms of payment do you accept?",
-    a: "Cash is preferred. E-transfer and major credit cards are accepted. A 3% processing fee applies to card payments. Deposits are non-refundable but transferable to a rescheduled appointment with 48 hours notice.",
+    a: "Cash and e-transfer are accepted. Deposits are non-refundable but transferable to a rescheduled appointment with 48 hours notice.",
   },
   {
     q: "Can I bring a friend to my appointment?",
