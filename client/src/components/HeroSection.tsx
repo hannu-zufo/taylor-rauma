@@ -4,7 +4,7 @@
  * Full-viewport hero: title + yin-yang logo side by side, Book a Session CTA
  */
 
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayloryinyang_ffd1ed9e.webp";
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayloryinyang2_4904ea7a.jpeg";
 
 export default function HeroSection() {
   const scrollTo = (href: string) => {
@@ -23,7 +23,7 @@ export default function HeroSection() {
         <img
           src={LOGO_URL}
           alt="Taylor Rauma Tattoo logo"
-          className="w-[clamp(260px,36vw,600px)] h-[clamp(260px,36vw,600px)] object-contain shrink-0"
+          className="w-[clamp(280px,38vw,640px)] h-[clamp(280px,38vw,640px)] object-contain shrink-0"
         />
       </div>
 
