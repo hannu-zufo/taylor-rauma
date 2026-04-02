@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "What is the aftercare process?",
-    a: "After your session, Taylor will bandage the tattoo and go over aftercare with you. Keep it clean, moisturise with unscented lotion, avoid soaking, and stay out of direct sun while healing. Touch-ups are free for life.",
+    a: "After your session, Taylor will bandage the tattoo and go over aftercare with you. Keep it clean, moisturise with unscented lotion, avoid soaking, and stay out of direct sun while healing.",
   },
   {
     q: "Do you do cover-ups?",
