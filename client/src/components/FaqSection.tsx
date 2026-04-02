@@ -31,10 +31,6 @@ const faqs = [
     a: "Fill out the booking request form on this page with as much detail as possible — subject matter, size, placement, and any reference images. Taylor reviews all requests and responds within 3–5 business days. Custom projects require a non-refundable deposit to secure your appointment.",
   },
   {
-    q: "Do you do walk-ins?",
-    a: "Yes — walk-ins are welcome for flash designs during studio hours (Tuesday through Saturday, 12–8 PM). For custom work, an appointment is required. Call ahead to confirm availability on the day.",
-  },
-  {
     q: "What is the minimum charge?",
     a: "The studio minimum is $100 CAD. Flash designs start at $120 depending on size. Custom work is quoted based on size, complexity, and placement. All pricing is discussed before any commitment is made.",
   },
