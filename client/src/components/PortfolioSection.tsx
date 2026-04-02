@@ -1,94 +1,11 @@
 /**
  * PortfolioSection — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Gallery grid — placeholder slots ready for your own images
+ * Masonry-style grid of real portfolio images with lightbox
  */
-import { useEffect, useRef } from "react";
-
-const INSTAGRAM_URL = "https://www.instagram.com/taylorrauma/";
-
-const portfolioItems = [
-  { id: 1, span: "row-span-2" },
-  { id: 2, span: "" },
-  { id: 3, span: "" },
-  { id: 4, span: "" },
-  { id: 5, span: "row-span-2" },
-  { id: 6, span: "" },
-  { id: 7, span: "" },
-  { id: 8, span: "" },
-];
+import { useEffect, useRef, useState } from "react";
 
 function useFadeUp(delay = 0) {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => el.classList.add("visible"), delay);
-          obs.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [delay]);
-  return ref;
-}
-
-export default function PortfolioSection() {
-  const headerRef = useFadeUp();
-
-  return (
-    <section id="portfolio" className="py-24 md:py-32 border-t border-black/8">
-      <div className="container">
-        {/* Header */}
-        <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
-          <div>
-            <h2 className="font-display text-5xl md:text-6xl text-black">Portfolio</h2>
-          </div>
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 auto-rows-[280px] md:auto-rows-[320px]">
-          {portfolioItems.map((item, i) => (
-            <PlaceholderItem key={item.id} item={item} delay={i * 60} />
-          ))}
-        </div>
-
-        {/* Instagram link */}
-        <div className="flex items-center justify-between mt-10 pt-8 border-t border-black/8">
-          <p className="font-body text-xs text-[#aaa] tracking-wide font-light">
-            More work on Instagram
-          </p>
-          <a
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-xs tracking-[0.12em] uppercase text-black border-b border-black pb-0.5 hover:opacity-50 transition-opacity duration-200 flex items-center gap-2"
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-            </svg>
-            @taylorrauma
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function PlaceholderItem({
-  item,
-  delay,
-}: {
-  item: { id: number; span: string };
-  delay: number;
-}) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = ref.current;
@@ -105,19 +22,136 @@ function PlaceholderItem({
     obs.observe(el);
     return () => obs.disconnect();
   }, [delay]);
+  return ref;
+}
+
+const IMAGES = [
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taysnake_397b4260.jpeg", alt: "Snake tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taygoldfish_98d349ca.jpeg", alt: "Goldfish tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taysacredheart_511fe188.jpeg", alt: "Sacred heart tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taytombstone_4449a380.jpeg", alt: "Tombstone tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayheartface_b9bc2d41.jpeg", alt: "Heart face tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taycowgirl_2e54a407.jpeg", alt: "Cowgirl tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayrose_7412bbe9.jpeg", alt: "Rose tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayolives_31113831.jpeg", alt: "Olives tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayskull_e01b9061.jpeg", alt: "Skull tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tay38_15538bda.jpeg", alt: "38 tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taycowboyskull_332c0ca7.jpeg", alt: "Cowboy skull tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/f592a866-a7c1-4834-8a77-ca1ddb5a14f4_15abd6a8.jpg", alt: "Tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/ffc35c18-1fd7-47d6-843d-b1258bf30806_21257477.jpg", alt: "Tattoo" },
+];
+
+export default function PortfolioSection() {
+  const headerRef = useFadeUp();
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  // Close lightbox on Escape
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowRight") setLightbox((i) => i !== null ? (i + 1) % IMAGES.length : null);
+      if (e.key === "ArrowLeft") setLightbox((i) => i !== null ? (i - 1 + IMAGES.length) % IMAGES.length : null);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
+  return (
+    <section id="portfolio" className="py-24 md:py-32 border-t border-black/8">
+      <div className="container">
+        {/* Header */}
+        <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div>
+            <h2 className="font-display text-5xl md:text-6xl text-black">Portfolio</h2>
+          </div>
+          <a
+            href="https://www.instagram.com/taylorrauma/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs tracking-[0.15em] uppercase text-[#888] hover:text-black transition-colors duration-200 flex items-center gap-2 group"
+          >
+            <span>@taylorrauma</span>
+            <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
+          </a>
+        </div>
+
+        {/* Grid */}
+        <div className="columns-2 md:columns-3 lg:columns-4 gap-3 space-y-3">
+          {IMAGES.map((img, i) => (
+            <PortfolioItem key={i} img={img} index={i} onClick={() => setLightbox(i)} />
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-5 right-6 text-white/60 hover:text-white text-3xl font-light transition-colors"
+            onClick={() => setLightbox(null)}
+          >
+            ×
+          </button>
+          <button
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40 hover:text-white text-3xl px-3 py-6 transition-colors"
+            onClick={(e) => { e.stopPropagation(); setLightbox((lightbox - 1 + IMAGES.length) % IMAGES.length); }}
+          >
+            ‹
+          </button>
+          <img
+            src={IMAGES[lightbox].src}
+            alt={IMAGES[lightbox].alt}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/40 hover:text-white text-3xl px-3 py-6 transition-colors"
+            onClick={(e) => { e.stopPropagation(); setLightbox((lightbox + 1) % IMAGES.length); }}
+          >
+            ›
+          </button>
+          <p className="absolute bottom-5 left-1/2 -translate-x-1/2 font-body text-xs text-white/30 tracking-widest">
+            {lightbox + 1} / {IMAGES.length}
+          </p>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function PortfolioItem({ img, index, onClick }: { img: { src: string; alt: string }; index: number; onClick: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => el.classList.add("visible"), index * 40);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.05 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [index]);
 
   return (
     <div
       ref={ref}
-      className={`fade-up relative overflow-hidden bg-[#f0f0f0] ${item.span}`}
+      className="fade-up break-inside-avoid cursor-pointer group overflow-hidden"
+      onClick={onClick}
     >
-      {/* Subtle cross-hair placeholder */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative w-8 h-8 opacity-20">
-          <div className="absolute top-1/2 left-0 right-0 h-px bg-black -translate-y-1/2" />
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-black -translate-x-1/2" />
-        </div>
-      </div>
+      <img
+        src={img.src}
+        alt={img.alt}
+        className="w-full h-auto block group-hover:opacity-85 transition-opacity duration-300"
+        loading="lazy"
+      />
     </div>
   );
 }
