@@ -15,7 +15,7 @@ export default function HeroSection() {
     <section id="hero" className="min-h-screen flex flex-col md:flex-row pt-14 md:pt-16">
       {/* Left — text */}
       <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 py-20 md:py-0 border-r border-black/8">
-        <p className="section-label mb-6">Gastown · Vancouver, BC</p>
+        <p className="section-label mb-6">Vancouver, BC</p>
 
         <h1 className="font-display text-[clamp(3.5rem,8vw,7rem)] leading-[0.95] text-black mb-8">
           Taylor<br />Rauma
@@ -24,7 +24,7 @@ export default function HeroSection() {
         <div className="w-8 h-px bg-black mb-8" />
 
         <p className="font-body text-sm text-[#555] leading-relaxed max-w-xs mb-10 font-light">
-          Traditional American tattooing out of Gastown, Vancouver.
+          Traditional American tattooing out of Vancouver.
           Bold lines, solid colour, designs built to last.
           Walk-ins welcome.
         </p>

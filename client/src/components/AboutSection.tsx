@@ -56,7 +56,7 @@ export default function AboutSection() {
           <div className="w-8 h-px bg-black mb-8" />
 
           <p className="font-body text-sm text-[#555] leading-relaxed mb-5 font-light">
-            Taylor Rauma has been tattooing out of Gastown, Vancouver since 2012.
+            Taylor Rauma has been tattooing out of Vancouver since 2012.
             Trained under some of the most respected traditional artists on the West Coast,
             her work is rooted in the American Traditional canon — bold outlines, a limited
             palette of solid colours, and subject matter drawn from the golden age of tattooing.
@@ -95,21 +95,19 @@ export default function AboutSection() {
         <div ref={studioRef} className="fade-up flex flex-col justify-center px-8 md:px-12 lg:px-16 py-20 order-2 md:order-1">
           <p className="section-label mb-6">The Studio</p>
           <h3 className="font-display text-3xl md:text-4xl text-black mb-8">
-            Gastown,<br />Vancouver
+            Vancouver, BC
           </h3>
           <div className="w-8 h-px bg-black mb-8" />
 
           <p className="font-body text-sm text-[#555] leading-relaxed mb-8 font-light">
-            The studio sits on Water Street in Gastown — Vancouver's oldest neighbourhood,
-            a cobblestone district of Victorian brick buildings and the kind of history
-            that suits traditional tattooing perfectly.
+            The studio sits on Water Street in Vancouver — a historic district of brick buildings and the kind of character that suits traditional tattooing perfectly.
           </p>
 
           <div className="space-y-5 text-sm">
             <div className="flex gap-6">
               <div>
                 <p className="section-label mb-1.5">Address</p>
-                <p className="font-body text-[#444] font-light">312 Water Street<br />Gastown, Vancouver, BC V6B 1B6</p>
+                <p className="font-body text-[#444] font-light">312 Water Street<br />Vancouver, BC V6B 1B6</p>
               </div>
             </div>
             <div className="flex gap-10">

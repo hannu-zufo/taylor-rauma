@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="font-display text-2xl text-black mb-2">Taylor Rauma</p>
-            <p className="section-label mb-6">Traditional Tattooing · Gastown · Vancouver</p>
+            <p className="section-label mb-6">Traditional Tattooing · Vancouver, BC</p>
             <p className="font-body text-xs text-[#aaa] leading-relaxed font-light max-w-[200px]">
               Bold lines, solid colour, designs built to last a lifetime.
             </p>
@@ -79,7 +79,7 @@ export default function Footer() {
                 <p className="section-label mb-1.5">Address</p>
                 <p className="font-body text-[#666] font-light leading-relaxed">
                   312 Water Street<br />
-                  Gastown, Vancouver, BC<br />
+                  Vancouver, BC<br />
                   V6B 1B6
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Taylor Rauma Tattoo. All rights reserved.
           </p>
           <p className="font-body text-[10px] text-[#ccc] font-light">
-            Gastown, Vancouver · Traditional American Tattooing
+            Vancouver, BC · Traditional American Tattooing
           </p>
         </div>
       </div>
