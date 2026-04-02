@@ -36,14 +36,6 @@ export default function HeroSection() {
           >
             Book a Session
           </a>
-          <a
-            href="https://www.instagram.com/taylorrauma/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-xs tracking-[0.15em] uppercase px-7 py-3.5 border border-black text-black hover:bg-black hover:text-white transition-all duration-200 text-center"
-          >
-            View Work
-          </a>
         </div>
 
         {/* Scroll indicator */}
