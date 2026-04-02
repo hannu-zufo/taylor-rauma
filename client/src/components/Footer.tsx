@@ -36,7 +36,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:hello@taylorrauma.com"
+                href="mailto:taylorraumatattoo@gmail.com"
                 aria-label="Email"
                 className="w-8 h-8 border border-black/12 flex items-center justify-center text-[#aaa] hover:border-black hover:text-black transition-all duration-200"
               >
@@ -75,27 +75,9 @@ export default function Footer() {
             <p className="section-label mb-5">Visit</p>
             <div className="space-y-4 text-xs">
               <div>
-                <p className="section-label mb-1.5">Address</p>
-                <p className="font-body text-[#666] font-light leading-relaxed">
-                  312 Water Street<br />
-                  Vancouver, BC<br />
-                  V6B 1B6
-                </p>
-              </div>
-              <div>
-                <p className="section-label mb-1.5">Hours</p>
-                <p className="font-body text-[#666] font-light">
-                  Tuesday – Saturday<br />
-                  12:00 PM – 8:00 PM
-                </p>
-              </div>
-              <div>
                 <p className="section-label mb-1.5">Contact</p>
-                <a href="mailto:hello@taylorrauma.com" className="font-body text-[#666] font-light block hover:text-black transition-colors">
-                  hello@taylorrauma.com
-                </a>
-                <a href="tel:+16045550182" className="font-body text-[#666] font-light block hover:text-black transition-colors">
-                  +1 (604) 555-0182
+                <a href="mailto:taylorraumatattoo@gmail.com" className="font-body text-[#666] font-light block hover:text-black transition-colors">
+                  taylorraumatattoo@gmail.com
                 </a>
               </div>
             </div>
