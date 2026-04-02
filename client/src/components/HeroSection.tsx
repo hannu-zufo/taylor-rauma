@@ -24,9 +24,8 @@ export default function HeroSection() {
         <div className="w-8 h-px bg-black mb-8" />
 
         <p className="font-body text-sm text-[#555] leading-relaxed max-w-xs mb-10 font-light">
-          Traditional American tattooing out of Vancouver.
-          Bold lines, solid colour, designs built to last.
-          Walk-ins welcome.
+          Traditional tattooing out of Vancouver.
+          Bold, clean, designed to last.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3">
