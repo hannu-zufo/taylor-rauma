@@ -50,10 +50,6 @@ export default function PortfolioSection() {
             <p className="section-label mb-3">The Work</p>
             <h2 className="font-display text-5xl md:text-6xl text-black">Portfolio</h2>
           </div>
-          <p className="font-body text-sm text-[#888] max-w-xs leading-relaxed font-light">
-            Traditional American tattooing. Every piece drawn by hand,
-            executed with intention.
-          </p>
         </div>
 
         {/* Grid */}
