@@ -117,7 +117,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <p className="section-label mb-1.5">Contact</p>
-                <a href="mailto:hello@taylorrauma.com" className="font-body text-[#444] font-light block hover:text-black transition-colors">hello@taylorrauma.com</a>
+                <a href="mailto:taylorraumatattoo@gmail.com" className="font-body text-[#444] font-light block hover:text-black transition-colors">taylorraumatattoo@gmail.com</a>
                 <a href="tel:+16045550182" className="font-body text-[#444] font-light block hover:text-black transition-colors">+1 (604) 555-0182</a>
               </div>
             </div>
