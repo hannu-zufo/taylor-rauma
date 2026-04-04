@@ -12,7 +12,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-14 md:pt-16">
+    <section id="hero" className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-14 md:pt-16 pb-8">
       <p className="section-label mb-6">Vancouver, BC</p>
 
       {/* Title + Logo side by side */}
@@ -40,7 +40,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="hidden md:flex items-center gap-3 mt-auto pt-16 pb-4">
+      <div className="hidden md:flex items-center gap-3 mt-6 pt-4 pb-0">
         <div className="w-px h-10 bg-black/20" />
         <span className="section-label">Scroll</span>
       </div>

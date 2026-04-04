@@ -56,7 +56,7 @@ export default function PortfolioSection() {
   }, []);
 
   return (
-    <section id="portfolio" className="py-24 md:py-32 border-t border-black/8">
+    <section id="portfolio" className="pt-12 pb-24 md:pt-16 md:pb-32 border-t border-black/8">
       <div className="container">
         {/* Header */}
         <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
