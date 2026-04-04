@@ -1,10 +1,11 @@
 /**
  * BookingSection — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Clean contact/booking request form, minimal field styling
+ * Clean contact/booking request form — wired to tRPC booking.submit
  */
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
+import { trpc } from "@/lib/trpc";
 
 function useFadeUp(delay = 0) {
   const ref = useRef<HTMLDivElement>(null);
@@ -26,22 +27,34 @@ function useFadeUp(delay = 0) {
   return ref;
 }
 
+const EMPTY_FORM = {
+  name: "",
+  email: "",
+  phone: "",
+  type: "custom",
+  placement: "",
+  size: "",
+  description: "",
+  budget: "",
+};
+
 export default function BookingSection() {
   const headerRef = useFadeUp();
   const formRef = useFadeUp(100);
   const infoRef = useFadeUp(60);
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    type: "custom",
-    placement: "",
-    size: "",
-    description: "",
-    budget: "",
+  const [form, setForm] = useState(EMPTY_FORM);
+
+  const submitMutation = trpc.booking.submit.useMutation({
+    onSuccess: () => {
+      toast.success("Request sent. Taylor will be in touch within a few days.");
+      setForm(EMPTY_FORM);
+    },
+    onError: (err) => {
+      toast.error("Something went wrong. Please try again or email taylorraumatattoo@gmail.com directly.");
+      console.error("[Booking] Submit error:", err);
+    },
   });
-  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -51,12 +64,15 @@ export default function BookingSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      toast.success("Request sent. Taylor will be in touch within a few days.");
-      setForm({ name: "", email: "", phone: "", type: "custom", placement: "", size: "", description: "", budget: "" });
-    }, 1000);
+    submitMutation.mutate({
+      name: form.name,
+      email: form.email,
+      phone: form.phone || undefined,
+      placement: form.placement || undefined,
+      size: form.size || undefined,
+      description: form.description,
+      availability: form.budget ? `Budget: ${form.budget}` : undefined,
+    });
   };
 
   return (
@@ -145,10 +161,10 @@ export default function BookingSection() {
             {/* Submit */}
             <button
               type="submit"
-              disabled={submitting}
+              disabled={submitMutation.isPending}
               className="w-full font-body text-xs tracking-[0.15em] uppercase py-4 bg-black text-white hover:bg-[#222] disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 mt-2"
             >
-              {submitting ? "Sending…" : "Send Request"}
+              {submitMutation.isPending ? "Sending…" : "Send Request"}
             </button>
 
             <p className="font-body text-[10px] text-[#bbb] leading-relaxed">

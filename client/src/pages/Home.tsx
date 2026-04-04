@@ -1,7 +1,7 @@
 /**
  * Home — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Sections: Hero → Portfolio → About → Shop → FAQ → Booking → Footer
+ * Sections: Hero → Portfolio → Shop → FAQ → Booking → Footer
  */
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
