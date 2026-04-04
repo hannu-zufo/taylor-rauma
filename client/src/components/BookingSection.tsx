@@ -7,6 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayloryinyang2_4904ea7a.jpeg";
+
 function useFadeUp(delay = 0) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -44,10 +46,11 @@ export default function BookingSection() {
   const infoRef = useFadeUp(60);
 
   const [form, setForm] = useState(EMPTY_FORM);
+  const [submitted, setSubmitted] = useState(false);
 
   const submitMutation = trpc.booking.submit.useMutation({
     onSuccess: () => {
-      toast.success("Request sent. Taylor will be in touch within a few days.");
+      setSubmitted(true);
       setForm(EMPTY_FORM);
     },
     onError: (err) => {
@@ -103,8 +106,35 @@ export default function BookingSection() {
           </div>
         </div>
 
-        {/* Right — form */}
+        {/* Right — form or confirmation */}
         <div ref={formRef} className="fade-up flex flex-col justify-center px-8 md:px-12 lg:px-16 py-20 border-l border-black/8">
+          {submitted ? (
+            <div className="max-w-md flex flex-col items-start gap-8">
+              <img
+                src={LOGO_URL}
+                alt="Taylor Rauma Tattoo"
+                className="w-24 h-24 object-contain"
+              />
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl text-black mb-4 leading-tight">
+                  Request Received
+                </h3>
+                <div className="w-8 h-px bg-black/20 mb-6" />
+                <p className="font-body text-sm text-[#555] leading-relaxed mb-6 font-light">
+                  Thanks for reaching out. Taylor will review your request and get back to you within 3–5 business days.
+                </p>
+                <p className="font-body text-[11px] text-[#aaa] tracking-wide uppercase">
+                  taylorraumatattoo@gmail.com
+                </p>
+              </div>
+              <button
+                onClick={() => setSubmitted(false)}
+                className="font-body text-[10px] tracking-[0.2em] uppercase border-b border-black/30 pb-0.5 hover:border-black transition-colors duration-200"
+              >
+                Submit another request
+              </button>
+            </div>
+          ) : (
           <form onSubmit={handleSubmit} className="space-y-5 max-w-md">
             {/* Name + Email */}
             <div className="grid grid-cols-2 gap-4">
@@ -172,6 +202,7 @@ export default function BookingSection() {
               Taylor reviews all requests and will reach out to discuss your project.
             </p>
           </form>
+          )}
         </div>
       </div>
     </section>
