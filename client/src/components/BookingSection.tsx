@@ -135,7 +135,7 @@ export default function BookingSection() {
               </button>
             </div>
           ) : (
-          <form onSubmit={handleSubmit} className="space-y-5 max-w-md">
+            <form onSubmit={handleSubmit} className="space-y-5 max-w-md">
             {/* Name + Email */}
             <div className="grid grid-cols-2 gap-4">
               <Field label="Name" name="name" type="text" value={form.name} onChange={handleChange} required placeholder="Your name" />
@@ -201,7 +201,7 @@ export default function BookingSection() {
               Submitting this form does not guarantee an appointment.
               Taylor reviews all requests and will reach out to discuss your project.
             </p>
-          </form>
+            </form>
           )}
         </div>
       </div>

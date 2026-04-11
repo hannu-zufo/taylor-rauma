@@ -2,6 +2,17 @@ import { describe, expect, it, vi, beforeEach } from "vitest";
 import { appRouter } from "./routers";
 import type { TrpcContext } from "./_core/context";
 
+// Mock Resend so no real HTTP calls are made during tests
+vi.mock("resend", () => {
+  return {
+    Resend: vi.fn().mockImplementation(() => ({
+      emails: {
+        send: vi.fn().mockResolvedValue({ id: "mock-email-id" }),
+      },
+    })),
+  };
+});
+
 // Mock the notifyOwner helper so tests don't call external services
 vi.mock("./_core/notification", () => ({
   notifyOwner: vi.fn().mockResolvedValue(true),
@@ -20,6 +31,7 @@ function createPublicContext(): TrpcContext {
 describe("booking.submit", () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    process.env.RESEND_API_KEY = "re_test_key";
   });
 
   it("accepts a valid booking request and notifies the owner", async () => {
