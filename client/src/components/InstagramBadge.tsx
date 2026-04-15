@@ -6,14 +6,14 @@
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taylogo_ef859444.jpeg";
 const IG_URL = "https://www.instagram.com/taylorrauma/";
 
-// First 6 portfolio images used as the grid
+// Latest 6 posts from @taylorrauma Instagram (sourced April 2026)
 const GRID_IMAGES = [
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayrose_7412bbe9.jpeg", alt: "Rose tattoo" },
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taysacredheart_511fe188.jpeg", alt: "Sacred heart tattoo" },
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taytombstone_4449a380.jpeg", alt: "Tombstone tattoo" },
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayheartface_b9bc2d41.jpeg", alt: "Heart face tattoo" },
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayskull_e01b9061.jpeg", alt: "Skull fire tattoo" },
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taygoldfish_98d349ca.jpeg", alt: "Goldfish tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/dragon_56241f3d.jpg", alt: "Dragon tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/skull_cherries_1781bb96.jpg", alt: "Skull cherries tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/lucky_spider_67ca1d81.jpg", alt: "Lucky spider web tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/panther_c8ad5971.jpg", alt: "Panther tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/cards_flower_c503aa68.jpg", alt: "Cards and flower tattoo" },
+  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/rabbit_foot_d9bf7199.jpg", alt: "Rabbit foot tattoo" },
 ];
 
 // Instagram gradient icon (official brand colours)
