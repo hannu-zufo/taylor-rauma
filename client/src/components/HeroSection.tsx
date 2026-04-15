@@ -19,7 +19,7 @@ export default function HeroSection() {
       <p className="section-label">Vancouver, BC</p>
 
       {/* Title + Logo side by side, logo aligned to right of title */}
-      <div className="flex flex-row items-center gap-6 md:gap-10">
+      <div className="flex flex-row items-center gap-3 md:gap-5">
         <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.88] text-black shrink-0">
           Taylor<br />Rauma<br />Tattoo
         </h1>
