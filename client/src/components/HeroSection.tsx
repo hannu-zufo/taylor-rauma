@@ -30,7 +30,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-20 pb-10 gap-[4.5rem]"
+      className="flex flex-col px-6 md:px-12 lg:px-20 pt-20 pb-10 gap-[4.5rem]"
     >
       <p className="section-label">Vancouver, BC</p>
 
