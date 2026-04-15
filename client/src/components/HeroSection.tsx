@@ -4,7 +4,7 @@
  * Full-viewport hero: title + yin-yang logo side by side, Book a Session CTA
  */
 
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayloryinyang2_4904ea7a.jpeg";
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taylogo_ef859444.jpeg";
 
 export default function HeroSection() {
   const scrollTo = (href: string) => {
