@@ -1,12 +1,28 @@
 /**
  * HeroSection — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Full-viewport hero: title with logo directly to its right, CTA below
+ * Full-viewport hero: title with logo directly to its right, logo height = title height
  */
+
+import { useRef, useEffect, useState } from "react";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taylogo_ef859444.jpeg";
 
 export default function HeroSection() {
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const [titleHeight, setTitleHeight] = useState<number | null>(null);
+
+  useEffect(() => {
+    const measure = () => {
+      if (titleRef.current) {
+        setTitleHeight(titleRef.current.offsetHeight);
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -18,16 +34,24 @@ export default function HeroSection() {
     >
       <p className="section-label">Vancouver, BC</p>
 
-      {/* Title + Logo side by side, logo aligned to right of title */}
-      <div className="flex flex-row items-center gap-3 md:gap-5">
-        <h1 className="font-display text-[clamp(3.5rem,9vw,9rem)] leading-[0.88] text-black shrink-0">
+      {/* Title + Logo row: logo height matches the h1 block exactly */}
+      <div className="flex flex-row items-center gap-2 md:gap-3">
+        <h1
+          ref={titleRef}
+          className="font-display text-[clamp(3.5rem,9vw,9rem)] text-black shrink-0"
+          style={{ lineHeight: 0.88 }}
+        >
           Taylor<br />Rauma<br />Tattoo
         </h1>
-        <img
-          src={LOGO_URL}
-          alt="Taylor Rauma Tattoo logo"
-          className="w-[clamp(180px,22vw,420px)] h-[clamp(180px,22vw,420px)] object-contain shrink-0"
-        />
+
+        {titleHeight !== null && (
+          <img
+            src={LOGO_URL}
+            alt="Taylor Rauma Tattoo logo"
+            style={{ height: titleHeight, width: "auto" }}
+            className="object-contain shrink-0"
+          />
+        )}
       </div>
 
       <div className="flex flex-col gap-4">
