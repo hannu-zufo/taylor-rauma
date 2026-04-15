@@ -33,11 +33,9 @@ const IMAGES = [
   { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayskull_e01b9061.jpeg", alt: "Skull fire tattoo" },
   { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taygoldfish_98d349ca.jpeg", alt: "Goldfish tattoo" },
   { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tay38_15538bda.jpeg", alt: "38 tattoo" },
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/tayolives_31113831.jpeg", alt: "Olive tattoo" },
   { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taysnake_397b4260.jpeg", alt: "Snake tattoo" },
   { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/ffc35c18-1fd7-47d6-843d-b1258bf30806_21257477.jpg", alt: "Coffin pins tattoo" },
   { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taycowgirl_2e54a407.jpeg", alt: "Cowgirl tattoo" },
-  { src: "https://d2xsxph8kpxj0f.cloudfront.net/310519663492676647/kqBHhYGUgYLdMJGKgBRpfr/taycowboyskull_332c0ca7.jpeg", alt: "Cowboy skull tattoo" },
 ];
 
 export default function PortfolioSection() {
