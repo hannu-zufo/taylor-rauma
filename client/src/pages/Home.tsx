@@ -1,7 +1,7 @@
 /**
  * Home — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Sections: Hero → Portfolio → Shop → FAQ → Booking → Footer
+ * Sections: Hero → Portfolio → Shop → Booking → FAQ → Footer
  */
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
@@ -18,8 +18,8 @@ export default function Home() {
       <HeroSection />
       <PortfolioSection />
       <ShopSection />
-      <FaqSection />
       <BookingSection />
+      <FaqSection />
       <Footer />
     </div>
   );
