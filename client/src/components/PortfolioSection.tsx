@@ -4,6 +4,7 @@
  * Masonry-style grid of real portfolio images with lightbox
  */
 import { useEffect, useRef, useState } from "react";
+import InstagramBadge from "@/components/InstagramBadge";
 
 function useFadeUp(delay = 0) {
   const ref = useRef<HTMLDivElement>(null);
@@ -57,19 +58,13 @@ export default function PortfolioSection() {
     <section id="portfolio" className="pt-12 pb-24 md:pt-16 md:pb-32 border-t border-black/8">
       <div className="container">
         {/* Header */}
-        <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-start justify-between mb-14 gap-8">
           <div>
             <h2 className="font-display text-5xl md:text-6xl text-black">Portfolio</h2>
           </div>
-          <a
-            href="https://www.instagram.com/taylorrauma/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body text-xs tracking-[0.15em] uppercase text-[#888] hover:text-black transition-colors duration-200 flex items-center gap-2 group"
-          >
-            <span>@taylorrauma</span>
-            <span className="group-hover:translate-x-0.5 transition-transform duration-200">→</span>
-          </a>
+          <div className="w-full md:w-[320px] shrink-0">
+            <InstagramBadge />
+          </div>
         </div>
 
         {/* Grid */}
