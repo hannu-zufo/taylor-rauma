@@ -57,12 +57,9 @@ export default function PortfolioSection() {
   return (
     <section id="portfolio" className="pt-12 pb-24 md:pt-16 md:pb-32 border-t border-black/8">
       <div className="container">
-        {/* Header */}
-        <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-start justify-between mb-14 gap-8">
-          <div>
-            <h2 className="font-display text-5xl md:text-6xl text-black">Portfolio</h2>
-          </div>
-          <div className="w-full md:w-[320px] shrink-0">
+        {/* Instagram badge */}
+        <div ref={headerRef} className="fade-up mb-14">
+          <div className="w-full md:w-[320px]">
             <InstagramBadge />
           </div>
         </div>
