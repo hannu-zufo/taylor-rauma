@@ -1,7 +1,7 @@
 /**
  * HeroSection — Taylor Rauma Tattoo
  * Design: Clean Minimal — Black & White
- * Full-viewport hero: title with logo directly to its right, logo height = title height
+ * Full-viewport hero: title+logo+CTA vertically centred in the viewport
  */
 
 import { useRef, useEffect, useState } from "react";
@@ -30,9 +30,9 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="flex flex-col px-6 md:px-12 lg:px-20 pt-12 pb-12 gap-[4.5rem]"
+      className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-20 py-12 gap-[4.5rem]"
     >
-      {/* Title + Logo row: logo height matches the h1 block exactly */}
+      {/* Title + Logo row: logo height = 92% of title height, flush against title */}
       <div className="flex flex-row items-center gap-0">
         <h1
           ref={titleRef}
