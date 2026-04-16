@@ -48,8 +48,8 @@ export default function HeroSection() {
           <img
             src={LOGO_URL}
             alt="Taylor Rauma Tattoo logo"
-            style={{ height: Math.round(titleHeight * 1.15), width: "auto" }}
-            className="object-contain shrink-0"
+            style={{ height: Math.round(titleHeight * 0.92), width: "auto" }}
+            className="object-contain shrink-0 self-center"
           />
         )}
       </div>
