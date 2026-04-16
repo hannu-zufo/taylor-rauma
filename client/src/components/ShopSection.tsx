@@ -4,7 +4,6 @@
  * Empty shop — coming soon placeholder
  */
 import { useEffect, useRef } from "react";
-import InstagramBadge from "@/components/InstagramBadge";
 
 function useFadeUp(delay = 0) {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,29 +38,21 @@ export default function ShopSection() {
           <h2 className="font-display text-5xl md:text-6xl text-black">Shop</h2>
         </div>
 
-        {/* Coming soon + Instagram badge */}
-        <div ref={bodyRef} className="fade-up flex flex-col md:flex-row gap-12 md:gap-16 items-start">
-          {/* Left: coming soon text */}
-          <div className="border border-black/8 py-20 px-8 flex flex-col items-center justify-center text-center gap-4 flex-1">
-            <p className="font-display text-2xl text-black">Coming Soon</p>
-            <p className="font-body text-sm text-[#aaa] font-light max-w-xs leading-relaxed">
-              Prints, apparel, and objects. Check back soon or follow{" "}
-              <a
-                href="https://www.instagram.com/taylorrauma/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-black border-b border-black/30 hover:border-black transition-colors"
-              >
-                @taylorrauma
-              </a>{" "}
-              for updates.
-            </p>
-          </div>
-
-          {/* Right: Instagram badge */}
-          <div className="w-full md:w-auto md:min-w-[320px]">
-            <InstagramBadge />
-          </div>
+        {/* Coming soon */}
+        <div ref={bodyRef} className="fade-up border border-black/8 py-20 flex flex-col items-center justify-center text-center gap-4">
+          <p className="font-display text-2xl text-black">Coming Soon</p>
+          <p className="font-body text-sm text-[#aaa] font-light max-w-xs leading-relaxed">
+            Prints, apparel, and objects. Check back soon or follow{" "}
+            <a
+              href="https://www.instagram.com/taylorrauma/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black border-b border-black/30 hover:border-black transition-colors"
+            >
+              @taylorrauma
+            </a>{" "}
+            for updates.
+          </p>
         </div>
       </div>
     </section>
