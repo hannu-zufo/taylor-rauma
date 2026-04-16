@@ -1,25 +1,25 @@
-name: CI
+name: CI - Build
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
-  workflow_dispatch:     # Allows manual run from the Actions tab
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
+      - name: Setup pnpm (reads version from package.json)
         uses: pnpm/action-setup@v4
-        # No "version:" here → it will use the one from package.json
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20 with pnpm cache
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -30,7 +30,3 @@ jobs:
 
       - name: Build
         run: pnpm build
-
-      # Remove or comment out the test step if you don't have tests yet
-      # - name: Test
-      #   run: pnpm test
