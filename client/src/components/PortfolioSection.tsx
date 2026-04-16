@@ -138,7 +138,7 @@ function PortfolioItem({ img, index, onClick }: { img: { src: string; alt: strin
       <img
         src={img.src}
         alt={img.alt}
-        className="w-full h-auto block group-hover:opacity-85 transition-opacity duration-300"
+        className="w-full h-auto block transition-transform duration-500 ease-out group-hover:scale-105 group-hover:opacity-90"
         loading="lazy"
       />
     </div>
