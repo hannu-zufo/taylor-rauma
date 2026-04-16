@@ -55,7 +55,7 @@ export default function PortfolioSection() {
   }, []);
 
   return (
-    <section id="portfolio" className="pt-12 pb-24 md:pt-16 md:pb-32 border-t border-black/8">
+    <section id="portfolio" className="py-12 md:py-16 border-t border-black/8">
       <div className="container">
         {/* Instagram badge */}
         <div ref={headerRef} className="fade-up mb-14">

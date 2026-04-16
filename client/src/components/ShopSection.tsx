@@ -30,7 +30,7 @@ export default function ShopSection() {
   const bodyRef = useFadeUp(120);
 
   return (
-    <section id="shop" className="py-24 md:py-32 border-t border-black/8">
+    <section id="shop" className="py-12 md:py-16 border-t border-black/8">
       <div className="container">
         {/* Header */}
         <div ref={headerRef} className="fade-up mb-14">

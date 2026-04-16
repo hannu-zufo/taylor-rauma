@@ -57,7 +57,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 md:py-32 border-t border-black/8">
+    <section id="faq" className="py-12 md:py-16 border-t border-black/8">
       <div className="container">
         {/* Header */}
         <div ref={headerRef} className="fade-up flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">

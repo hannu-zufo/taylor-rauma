@@ -80,9 +80,9 @@ export default function BookingSection() {
 
   return (
     <section id="booking" className="border-t border-black/8">
-      <div className="grid md:grid-cols-2 min-h-[70vh]">
+      <div className="grid md:grid-cols-2">
         {/* Left — info panel */}
-        <div ref={infoRef} className="fade-up flex flex-col justify-center px-8 md:px-12 lg:px-16 py-20 bg-black text-white">
+        <div ref={infoRef} className="fade-up flex flex-col justify-center px-8 md:px-12 lg:px-16 py-12 md:py-16 bg-black text-white">
           <p className="section-label mb-6 text-white/40">Get Tattooed</p>
           <h2 className="font-display text-4xl md:text-5xl text-white mb-8 leading-tight">
             Book a<br />Session
@@ -107,7 +107,7 @@ export default function BookingSection() {
         </div>
 
         {/* Right — form or confirmation */}
-        <div ref={formRef} className="fade-up flex flex-col justify-center px-8 md:px-12 lg:px-16 py-20 border-l border-black/8">
+        <div ref={formRef} className="fade-up flex flex-col justify-center px-8 md:px-12 lg:px-16 py-12 md:py-16 border-l border-black/8">
           {submitted ? (
             <div className="max-w-md flex flex-col items-start gap-8">
               <img
