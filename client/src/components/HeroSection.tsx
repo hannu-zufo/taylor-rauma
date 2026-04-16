@@ -32,8 +32,6 @@ export default function HeroSection() {
       id="hero"
       className="flex flex-col px-6 md:px-12 lg:px-20 pt-12 pb-12 gap-[4.5rem]"
     >
-      <p className="section-label">Vancouver, BC</p>
-
       {/* Title + Logo row: logo height matches the h1 block exactly */}
       <div className="flex flex-row items-center gap-0">
         <h1
