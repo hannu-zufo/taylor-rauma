@@ -1,0 +1,7 @@
+baseURL = "https://taylorrauma.com/"
+languageCode = "en-us"
+title = "taylorrauma.com"
+theme = "glacier-hugo"
+
+[params]
+  # Fill in client-specific params after scaffolding theme
